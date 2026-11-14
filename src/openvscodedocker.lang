@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "openvscodedocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[zh-cn]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server 把 VS Code 跑在 NAS 上：在任何设备用浏览器编辑文件、开终端、用 git、装扩展，工作区持久化在应用数据目录。本包额外生成了一个随机连接令牌，不知道打印出来的 URL 就无法打开编辑器。"
+release_note = "1. 首个版本：基于 Docker Hub 的 OpenVSCode Server 1.105.1，以非 root 容器运行。浏览器 IDE，支持终端、git 与扩展；随机连接令牌，工作区持久化在应用数据目录。"
+important    = "需要 DockerEngine（缺失时应用中心会自动安装）。首次启动会生成连接令牌，并在容器日志（docker logs openvscodedocker）里打印完整地址（http://<NAS-IP>:<端口>/?tkn=...）；令牌同时保存在 DockerAppData/openvscodedocker/workspace/.connection-token。内置终端以 uid 1000 操作你的 NAS——请只在内网使用，暴露到公网前务必配置带 TLS 的反向代理。卸载并删除数据前请先备份 workspace 目录。"
+
+[zh-hk]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server 把 VS Code 跑在 NAS 上：在任何裝置用瀏覽器編輯檔案、開終端、用 git、裝擴充功能，工作區持久化在應用資料目錄。本包額外產生了一個隨機連線令牌，不知道印出來的 URL 就無法開啟編輯器。"
+release_note = "1. 首個版本：基於 Docker Hub 的 OpenVSCode Server 1.105.1，以非 root 容器運行。瀏覽器 IDE，支援終端、git 與擴充功能；隨機連線令牌，工作區持久化在應用資料目錄。"
+important    = "需要 DockerEngine（缺少時應用中心會自動安裝）。首次啟動會產生連線令牌，並在容器日誌（docker logs openvscodedocker）裡印出完整位址（http://<NAS-IP>:<端口>/?tkn=...）；令牌同時保存在 DockerAppData/openvscodedocker/workspace/.connection-token。內建終端以 uid 1000 操作你的 NAS——請只在內網使用，公開到互聯網前務必配置帶 TLS 的反向代理。解除安裝並刪除資料前請先備份 workspace 目錄。"
+
+[fr-fr]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[de-de]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[it-it]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[es-es]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[hu-hu]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[ja-jp]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[ko-kr]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[pl-pl]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[ru-ru]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[tr-tr]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[pt-pt]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[ar-sa]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[cs-cz]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[he-il]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[id-id]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[nb-no]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[nl-nl]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[sv-se]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[th-th]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+
+[vi-vn]
+name         = "OpenVSCode Server"
+auth         = "gitpod-io"
+version      = "@@VERSION@@"
+descript     = "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL."
+release_note = "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal."
+

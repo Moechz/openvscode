@@ -1,0 +1,105 @@
+{
+  "app_id": "openvscodedocker",
+  "title": "OpenVSCode Server",
+  "image": "gitpod/openvscode-server:1.105.1",
+  "repo_name": "openvscode",
+  "mode": "wrapper",
+  "container_port": 3000,
+  "category": [
+    "Development_Tools"
+  ],
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/openvscodedocker/workspace",
+      "container": "/home/workspace"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai"
+  },
+  "auth": "gitpod-io",
+  "upstream_url": "https://github.com/gitpod-io/openvscode-server",
+  "upstream_license": "MIT",
+  "descript": "OpenVSCode Server runs VS Code in your browser on the NAS: edit files, open a terminal, use git and install extensions from any device, with the workspace persisted in the application data folder. This package adds a random connection token so the editor is not reachable without the printed URL.",
+  "release_note": "1. First release: OpenVSCode Server 1.105.1 from Docker Hub as a non-root container. Browser IDE with terminal, git and extensions; random connection token and workspace persisted in the application data folder.",
+  "important": "Requires DockerEngine (installed automatically if missing). The first start generates a connection token and prints the full URL (http://<NAS-IP>:<port>/?tkn=...) in the container log (docker logs openvscodedocker); the token is also stored in DockerAppData/openvscodedocker/workspace/.connection-token. The built-in terminal runs as uid 1000 on your NAS - keep it on the LAN and never expose it without a TLS reverse proxy. Back up the workspace folder before uninstalling with data removal.",
+  "probe": {
+    "user_in_image": "openvscode-server",
+    "entrypoint": [
+      "/bin/sh",
+      "-c",
+      "exec ${OPENVSCODE_SERVER_ROOT}/bin/openvscode-server --host 0.0.0.0 --without-connection-token \"${@}\"",
+      "--"
+    ],
+    "cmd": null,
+    "exposed_ports": [
+      3000
+    ],
+    "declared_volumes": [],
+    "image_healthcheck": [],
+    "digest": "gitpod/openvscode-server@sha256:5e7b8750749f282940a799ed59ccd02fac698ef6744f9113ac01c0ef8e76485e",
+    "architecture": "x86_64",
+    "platforms": [
+      "x86_64",
+      "aarch64"
+    ],
+    "http_client_in_image": "curl",
+    "trial_run": {
+      "ok": true,
+      "http_code": "200",
+      "state": "running",
+      "paths": [
+        "/home"
+      ],
+      "host_port": 18000,
+      "log_tail": "Server bound to 0.0.0.0:3000 (IPv4)\nExtension host agent listening on 3000\n\n[12:25:21] \n\n\n\n\nWeb UI available at http://localhost:3000\n[12:25:21] Extension host agent started.\n[12:25:21] Started initializing default profile extensions in extensions installation folder. file:///home/workspace/.openvscode-server/extensions\n[12:25:21] Completed initializing default profile extensions in extensions installation folder. file:///home/workspace/.openvscode-server/extensions",
+      "files_in_mounts": ""
+    },
+    "docker_hub": {},
+    "github": {}
+  },
+  "healthcheck": [
+    "CMD-SHELL",
+    "curl -s -o /dev/null http://127.0.0.1:3000/ || exit 1"
+  ],
+  "platform": "x86_64",
+  "user": "1000:1000",
+  "publisher": "Moechz",
+  "compose_project": "openvscodedocker",
+  "github_repo": "openvscode",
+  "upstream_version": "1.105.1",
+  "release_tag_prefix": "v",
+  "version": "1.105.1-1",
+  "help": "https://github.com/Moechz/openvscodeserver/issues",
+  "official": "https://github.com/gitpod-io/openvscode-server",
+  "license": "MIT",
+  "docker_socket": false,
+  "group_add": [],
+  "entrypoint_file": "src/entrypoint.sh",
+  "healthcheck_start_period": "45s",
+  "wrapper_note": "the image runs VS Code without any connection token; this wrapper generates a random\ntoken on first start, stores it in the workspace and prints the URL with the\ntoken, so the editor is not open to everyone on the network.",
+  "wrapper_note_readme": "- **Entrypoint wrapper**: generates a random connection token on first start (stored in `workspace/.connection-token`) and passes it with `--connection-token-file`; the URL with `?tkn=…` is printed in the container log.",
+  "translations": {
+    "zh-cn": {
+      "descript": "OpenVSCode Server 把 VS Code 跑在 NAS 上：在任何设备用浏览器编辑文件、开终端、用 git、装扩展，工作区持久化在应用数据目录。本包额外生成了一个随机连接令牌，不知道打印出来的 URL 就无法打开编辑器。",
+      "important": "需要 DockerEngine（缺失时应用中心会自动安装）。首次启动会生成连接令牌，并在容器日志（docker logs openvscodedocker）里打印完整地址（http://<NAS-IP>:<端口>/?tkn=...）；令牌同时保存在 DockerAppData/openvscodedocker/workspace/.connection-token。内置终端以 uid 1000 操作你的 NAS——请只在内网使用，暴露到公网前务必配置带 TLS 的反向代理。卸载并删除数据前请先备份 workspace 目录。",
+      "release_note": "1. 首个版本：基于 Docker Hub 的 OpenVSCode Server 1.105.1，以非 root 容器运行。浏览器 IDE，支持终端、git 与扩展；随机连接令牌，工作区持久化在应用数据目录。"
+    },
+    "zh-hk": {
+      "descript": "OpenVSCode Server 把 VS Code 跑在 NAS 上：在任何裝置用瀏覽器編輯檔案、開終端、用 git、裝擴充功能，工作區持久化在應用資料目錄。本包額外產生了一個隨機連線令牌，不知道印出來的 URL 就無法開啟編輯器。",
+      "important": "需要 DockerEngine（缺少時應用中心會自動安裝）。首次啟動會產生連線令牌，並在容器日誌（docker logs openvscodedocker）裡印出完整位址（http://<NAS-IP>:<端口>/?tkn=...）；令牌同時保存在 DockerAppData/openvscodedocker/workspace/.connection-token。內建終端以 uid 1000 操作你的 NAS——請只在內網使用，公開到互聯網前務必配置帶 TLS 的反向代理。解除安裝並刪除資料前請先備份 workspace 目錄。",
+      "release_note": "1. 首個版本：基於 Docker Hub 的 OpenVSCode Server 1.105.1，以非 root 容器運行。瀏覽器 IDE，支援終端、git 與擴充功能；隨機連線令牌，工作區持久化在應用資料目錄。"
+    }
+  },
+  "data_notes": "`/home/workspace` (mounted from `DockerAppData/openvscodedocker/workspace`) holds your projects, the `.openvscode-server` extensions/settings and `.connection-token`.",
+  "design_notes": [
+    "**Token instead of open access.** The upstream container disables the connection token; the wrapper generates one and stores it in the workspace, so the editor is protected by a random URL.",
+    "**Runs as uid 1000.** The image's `openvscode-server` user matches the TOS application user."
+  ],
+  "limitations": [
+    "- The token is printed in the log and stored in the workspace; delete the file and restart to rotate it.",
+    "- The terminal runs as uid 1000 on the NAS; treat access like SSH access.",
+    "- The UI is plain HTTP; use a TLS reverse proxy for remote access."
+  ],
+  "host_port": 8124
+}
