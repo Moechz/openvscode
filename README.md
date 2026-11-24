@@ -35,6 +35,14 @@ OpenVSCode Server on TOS 7 through the App Center:
 - **Token instead of open access.** The upstream container disables the connection token; the wrapper generates one and stores it in the workspace, so the editor is protected by a random URL.
 - **Runs as uid 1000.** The image's `openvscode-server` user matches the TOS application user.
 
+## Privacy
+
+This application runs entirely on your NAS. It does not include analytics, telemetry or advertising SDKs, and the packaging contains no code that sends data to the packager. Data is only exchanged with the services you configure yourself (for example media servers, notification endpoints or model APIs), and only from the container. Everything the application stores lives in the application data folder described above; removing the app with its data deletes it.
+
+## Third-party components
+
+The package runs the upstream image `gitpod/openvscode-server:1.105.1` unmodified. Its components and their licences are those of the upstream project (https://github.com/gitpod-io/openvscode-server), which is distributed under **MIT**. No upstream source code is redistributed in this repository; only the four packaging files are original work.
+
 ## Runtime file manifest
 
 Everything the application writes on the NAS lives inside its own data
